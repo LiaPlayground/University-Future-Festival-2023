@@ -294,9 +294,6 @@ Kontakt via:
 ## 1. Akt: Vom Problem des Speicherns
 
                       --{{0}}--
-_Ich bin der Geist, der stets verneint! Und das mit Recht; denn alles, was entsteht, Ist wert, daß es zugrunde geht;_
-
-                      --{{0}}--
 Wie lange wird deine Platform existieren?
 Jeder der bei diesem Meme lacht, sollte jetzt aufhorchen.
 Die durchschnittliche Lebensspanne einer Webseite beträgt heutzutage laut
@@ -362,17 +359,6 @@ Nur wenige wissen, das `git` seleber als Versions-Verwaltungs-System auch als We
 </section>
 
 
-#### Beaker Browser 🕊️
-
-Der Beaker-Browser war anders!
-Leider wurde vor kurzem eingestellt.
-Es handelte sich um einen Peer-2-Peer Browser, der es erlaubte im Browser direkt komplette WebSeiten zu erstellen oder auch LiaScript-Markdown Projekte.
-Für jedes Projekt wurde eine eindeutige URL in Form einer großen Zufallszahl erstellt.
-Anstatt über das `http` oder `https` Protokol auf die Inhalte zuzugreifen, konnten diese über das `hyper` Protokol aufgerufen werden.
-War der Browser aus oder offline ist, konnte auf die Daten nicht mehr zugegriffen werden, aber jeder andere Beaker-Browser der auf die Inhalte zugegriffen hatte konnte diese auch selber wieder teilen.
-
-!?[Beaker-Browser](https://www.youtube.com/watch?v=faBigIjf05M)
-
 #### Inter-Planetary File System
 
                               
@@ -400,10 +386,49 @@ Die Vorteile sind offensichtlich, falls ein Peer ausfällt, können die Daten de
 Und dass das Projekt langsam aber sicher im Mainstream ankommt, sieht man dadurch, dass der [Brave Browser](todo) und [Opera](todo) neben `http` und `https` jetzt auch `ipfs` und `ipns` als Protokol unterstützen und es ebenfalls erlauben Inhalte direkt über den Browser zu teilen.
 Auch LiaScript-Kurse können über IPFS übertragen werden.
 
+#### Beaker Browser 🕊️
 
-#### Tor & OnionShare
+Der Beaker-Browser war anders!
+Leider wurde vor kurzem eingestellt.
+Es handelte sich um einen Peer-2-Peer Browser, der es erlaubte im Browser direkt komplette WebSeiten zu erstellen oder auch LiaScript-Markdown Projekte.
+Für jedes Projekt wurde eine eindeutige URL in Form einer großen Zufallszahl erstellt.
+Anstatt über das `http` oder `https` Protokol auf die Inhalte zuzugreifen, konnten diese über das `hyper` Protokol aufgerufen werden.
+War der Browser aus oder offline ist, konnte auf die Daten nicht mehr zugegriffen werden, aber jeder andere Beaker-Browser der auf die Inhalte zugegriffen hatte konnte diese auch selber wieder teilen.
+
+!?[Beaker-Browser](https://www.youtube.com/watch?v=faBigIjf05M)
+
+#### HowTo: Tor & OnionShare
+
+__Tor Browser: For anonymous browsing__
+
+* Download & Install: https://www.torproject.org/download/
+
+* Disable private browsing to enable IndexedDB for caching LiaScript courses:
+  
+  Settings >> Privacy & Security >> History >> Always use private browsing mode (disable)
+
+* Enable CORS:
+
+  Settings >> Extensions & Themes >> Search for "[CORS Unblock](https://addons.mozilla.org/en-US/firefox/addon/cors-unblock/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)" >> Click on "[CORS Unblock](https://addons.mozilla.org/en-US/firefox/addon/cors-unblock/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)" >> Install (Add to Firefox)
+
+  If you have __disabled private browsing__ mode, enable "CORS Unblock".
+
+  Otherwise, enable the plugin first to be used in private mode:
+  Settings >> Extensions & Themes >> "CORS Unblock" >> Run in Private Windows (Allow)
 
 
+  ![Activate CORS Unblock](https://addons.mozilla.org/user-media/previews/full/213/213890.png?modified=1622134234)
+
+
+__OnionShare for anonymous hosting and sharing__
+
+* Download & Install: https://onionshare.org
+* Open and "Connect to Tor"
+* Share data: Start Hosting >> Add Files or Add Folder >> Start sharing
+* Send the Onion-Address and the Private-Key to your students
+* Open the Onion-Address within the Tor-Browser, enter the private key and select "Remember this key"
+* Open the README.md of the course and copy this URL
+* Goto https://LiaScript.github.io and paste this URL "click on Load URL"
 
 
 
@@ -450,7 +475,11 @@ Sie muss nur einmal vollständig vom Browser geladen werden, dann ist sie auch o
 
 ### Classroom-Lite
 
-### 
+> ... Ich bin der Geist, der stets verneint!
+> Und das mit Recht; denn alles, was __ZENTRAL__ entsteht, Ist wert, daß es zugrunde geht; ...
+>
+> -- Mephisto
+
 
 ## Zusammenfassung
 
