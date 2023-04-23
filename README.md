@@ -242,11 +242,24 @@ to release built up tension.
 @Textanalysis.FULL
 
 
-### Natürlich Chat-GPT
+### Natürlich ChatGPT
+
+Bei LiaScript handelt es sich um reine Textbeschreibungen von Lehrinhalten.
+ChatGPT ist eine Künstliche Intelligenz die Texte erzeugt.
+Kann ChatGPT auch genutzt werden Online-Kurse für verschiedenste Themen auch in LiaScript zu erzeugen?
+Die Antwort ist Ja.
+[Dr Aneesha Bakharia](https://github.com/aneesha) Hauptverantwortliche für die Entwicklung und Umsetzung von Lernanalytik Initiativen an der University of Queensland (Australien), hat uns damit überrascht wie man ChatGPT LiaScript-Syntax beibringen kann.
+Eine Anfrage zu einem bestimmten Lehrinhalt liefert als Result somit nicht nur einen Erklärtext, sondern gleich einen interaktiven LiaScript-Kurs mit Quizzen.
+
+![Chat](img/ChatGPT.png "Quelle: https://aneesha.medium.com/act-as-a-learning-designer-getting-chatgpt-to-generate-an-online-module-8a16a2813bd6")
+
+In einer 
+
 
 ??[EduWeaver AutoCourse](https://colab.research.google.com/github/aneesha/eduweaver/blob/main/EduWeaver_AutoCourse.ipynb)
 
 https://github.com/aneesha/eduweaver
+
 
 ### Wo finde ich mehr Informationen?
 
@@ -349,7 +362,7 @@ Nur wenige wissen, das `git` seleber als Versions-Verwaltungs-System auch als We
 </section>
 
 
-#### RIP: Beaker Browser
+#### Beaker Browser 🕊️
 
 Der Beaker-Browser war anders!
 Leider wurde vor kurzem eingestellt.
@@ -362,16 +375,37 @@ War der Browser aus oder offline ist, konnte auf die Daten nicht mehr zugegriffe
 
 #### Inter-Planetary File System
 
+                              
 Das Inter-Planetary File System oder IPFS ist ebenfalls ein Peer-2-Peer Netzwerk und kann als verteilte DropBox oder Datenbank gesehen werden.
 Anstatt von Namen wird jeder Datei ein Hashwert zugeordnet, dabei handelt es sich praktisch um einen Fingerabdruck.
 Wird die gleiche Datei von jemand anderem via IPFS geteilt, so erhält sie den gleichen Hashwert auch wenn der Name ein anderer ist.
+
+
+``` ascii
+
+   (Client-Server Architektur)           (Peer-to-Peer (IPFS))
+ ┌─────────────────────────────┐     ┌────────────────────────────
+▒│ 📱 ------.        .------ 💻  │    ▒│     📱 -------- 💻 ┄ ┄ ┄ ┄
+▒│          \      /           │    ▒│    / \          \
+▒│           \    /            │    ▒│   /   \          \
+▒│  💻 -------- 🖥  -------- 📱   │    ▒│ 💻 -----💻 ---------📱 ┄ ┄
+▒│           /    \            │    ▒│   \   /  \       /
+▒│          /      \           │    ▒│    \ /    \            📱
+▒│ 📱 ------'        '------ 💻  │    ▒│     📱 ---- 💻 ┄ ┄ ┄ ┄
+▒└─────────────────────────────┘    ▒└────────────────────────────
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+```
+
+Die Vorteile sind offensichtlich, falls ein Peer ausfällt, können die Daten dennoch bezogen werden, auch bei sehr fragilen Internetverbindungen mit Verbindungsabbrüchen.
+Und dass das Projekt langsam aber sicher im Mainstream ankommt, sieht man dadurch, dass der [Brave Browser](todo) und [Opera](todo) neben `http` und `https` jetzt auch `ipfs` und `ipns` als Protokol unterstützen und es ebenfalls erlauben Inhalte direkt über den Browser zu teilen.
+Auch LiaScript-Kurse können über IPFS übertragen werden.
+
 
 #### Tor & OnionShare
 
 
 
-                         {{1}}
-<div style="width:100%;height:0;padding-bottom:80%;position:relative;"><iframe src="https://giphy.com/embed/3ogwFSxwLoc3eNSfyE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/feistmusic-century-feist-3ogwFSxwLoc3eNSfyE">via GIPHY</a></p>
+
 
 #### Internet & Bildung?
 
@@ -392,9 +426,35 @@ Ein Land in dem
 
 ## 2. Akt: Offline?
 
+Nur ca. 50% der Weltbevölkerung hat überhaupt Zugriff auf das Internet.
+Des Weiteren ist die Qualität der Internetverbindung 
+
+![Weltkarte Internetnutzer](https://upload.wikimedia.org/wikipedia/commons/9/99/InternetPenetrationWorldMap.svg "Prozentualer Anteil von Internetnutzern gemessen an der Landesbevölkerung 2016")
+
+Kann es Internet auch offline geben?
+Die Antwort ist Ja!
+In Cuba gibt es zum Beispiel das [El Paquete Semanal](https://en.wikipedia.org/wiki/El_Paquete_Semanal).
+Dabei wird wöchentlich ein Datenpaket der neusten Filme, Serien, Zeitung, Programme zusammengestellt und verteilt.
+Bildungsplattformen, bei denen jeder Klick, jedes Testergebnis durch einen Server geprüft werden muss, sind so kaum zu etabliren.
+
+![Weltkarte Internetnutzer](img/cuba.png "Quellen: https://www.faz.net/aktuell/feuilleton/debatten/online-auf-kuba-jeden-sonntag-neues-internet-14893660.html \| https://cubanews.de/el-paquete-das-offline-internet-in-cuba/ ")
+
+### Progressive Web Apps
+
+Wenn wir sagen kaum, dann meinen wir, es gibt Mittel und Wege.
+Die LiaScript-Webseite selbst ist eine [Progressive Web App](todo) kurz PWA.
+Sie muss nur einmal vollständig vom Browser geladen werden, dann ist sie auch offline erreichbar.
 
 
 ## 3. Akt: Kommunikation ohne Server und Login
 
+### Classroom-Lite
+
+### 
+
+## Zusammenfassung
+
 ## asfd
 
+                         {{1}}
+<div style="width:100%;height:0;padding-bottom:80%;position:relative;"><iframe src="https://giphy.com/embed/3ogwFSxwLoc3eNSfyE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/feistmusic-century-feist-3ogwFSxwLoc3eNSfyE">via GIPHY</a></p>
