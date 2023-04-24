@@ -27,7 +27,7 @@ import:    https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
 Anfang dieses Jahres wurde an der TU Bergakademie, wie an vielen anderen Hochschulen auch, die IT von einem Hack lahmgelegt.
 
                        {{0-1}}
-![Schlagzeilen](img/hack.png)
+![Schlagzeilen](img/hack.png "Quellen: https://www.forschung-und-lehre.de/management/tu-freiberg-komplett-offline-5334 \| https://www.mdr.de/nachrichten/sachsen/chemnitz/freiberg/bergakademie-hacker-angriff-rektor-100.html \| https://www.saechsische.de/sachsen/nach-hackerangriff-geht-bergakademie-erstmals-wieder-ins-internet-5824142.html \| https://www.heise.de/news/Cyber-Angriff-IT-der-TU-Freiberg-weitreichend-lahmgelegt-7469937.html ")
 
                       --{{1}}--
 _An der gesamten Hochschule?_
