@@ -321,16 +321,23 @@ Das traurige Fazit des Berichts lautet, wenn die Gelder und die Mitarbeiter gehe
 ![Adresse nicht gefunde!](img/AdresseNichtGefunden.png "Source: ['Adresse nicht gefunden' – Auf den digitalen Spuren der E-Teaching-Förderprojekte](https://www.pedocs.de/volltexte/2011/3215/pdf/Haug_Wedekind_Adresse_nicht_gefunden_D_A.pdf)")
 
 
-### Lösung: Dezentrale Speicherung von Inhalten
-
-Wie können Inhalte dezentral gespeichert werden?
+### Lösung: Dezentrale & replizierte Speicherung
 
 
+                      --{{0}}--
+Wenn __eine__ Zelle stirbt, dann mit ihr gehen alle ihre Informationen verloren.
+Kopiert man die Inhalte und speichert sie an unterschiedlichen Orten, dann bleiben die Informationen mit einer höheren Wahrscheinlichkeit erhalten.
 
+                       {{0-1}}
+<div style="width:100%;height:0;padding-bottom:80%;position:relative;"><iframe src="https://giphy.com/embed/3ogwFSxwLoc3eNSfyE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/feistmusic-century-feist-3ogwFSxwLoc3eNSfyE">via GIPHY</a></p>
+
+
+    {{1-3}}
+<section>
 
 #### Git
 
-                      --{{0}}--
+                      --{{1}}--
 Git ist ein Versions-Verwaltungs-System das per-se schon dezentral und offline funktioniert.
 Jedes Git-Projekt das sich auf lokal auf irgendeiner Festplatte befindet ist eine vollständige Kopie sämtlicher versionen eines Projektes.
 Das Bild zeigt schematisch einen Versionsbaum mit verschiedenen Entwicklungssträngen auf denen parallel Code oder LiaScript-Kurse entwickelt werden können.
@@ -340,28 +347,29 @@ Der Vorteil dabei ist, dass verschiedene Entwicklungstränge auch wieder zusamme
 
 ![git branches](img/git.png)
 
-
-                        {{1}}
-<section>
+                        {{2}}
+<div>
 
 #### Selber hosten?
 
-
-                      --{{1}}--
+                      --{{2}}--
 [GitHub](https://github.com), [GitLab](https://gitlab.com) und [Gogs](https://gogs.io) sind Git-Plattformen, wobei die letzten beiden freie Open-Source-Server zum selber "hosten" zur Verfügung stellen.
 Nur wenige wissen, das `git` seleber als Versions-Verwaltungs-System auch als WebServer genutzt werden kann.  
-
 
 * GitLab: https://gitlab.com
 * Gogs: https://gogs.io
 * How to Setup a Git Server with only `git`: https://linuxize.com/post/how-to-setup-a-git-server/
 
+</div>
+
 </section>
 
+     {{3-5}}
+<section>
 
 #### Inter-Planetary File System
 
-                              
+                      --{{3}}--
 Das Inter-Planetary File System oder IPFS ist ebenfalls ein Peer-2-Peer Netzwerk und kann als verteilte DropBox oder Datenbank gesehen werden.
 Anstatt von Namen wird jeder Datei ein Hashwert zugeordnet, dabei handelt es sich praktisch um einen Fingerabdruck.
 Wird die gleiche Datei von jemand anderem via IPFS geteilt, so erhält sie den gleichen Hashwert auch wenn der Name ein anderer ist.
@@ -370,24 +378,31 @@ Wird die gleiche Datei von jemand anderem via IPFS geteilt, so erhält sie den g
 ``` ascii
 
    (Client-Server Architektur)           (Peer-to-Peer (IPFS))
- ┌─────────────────────────────┐     ┌────────────────────────────
-▒│ 📱 ------.        .------ 💻  │    ▒│     📱 -------- 💻 ┄ ┄ ┄ ┄
-▒│          \      /           │    ▒│    / \          \
-▒│           \    /            │    ▒│   /   \          \
-▒│  💻 -------- 🖥  -------- 📱   │    ▒│ 💻 -----💻 ---------📱 ┄ ┄
-▒│           /    \            │    ▒│   \   /  \       /
-▒│          /      \           │    ▒│    \ /    \            📱
-▒│ 📱 ------'        '------ 💻  │    ▒│     📱 ---- 💻 ┄ ┄ ┄ ┄
-▒└─────────────────────────────┘    ▒└────────────────────────────
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ ┌────────────────────────────┐     ┌────────────────────────────
+▒│ 📱 -----.        .----- 💻 │    ▒│     📱---------💻 ┄ ┄ ┄ ┄
+▒│          \      /          │    ▒│    / \          \
+▒│           \    /           │    ▒│   /   \          \
+▒│  💻 ------- 🖥 ------- 📱  │    ▒│ 💻-----💻---------📱 ┄ ┄
+▒│           /    \           │    ▒│   \   /  \       /
+▒│          /      \          │    ▒│    \ /    \            📱
+▒│ 📱 -----'        '----- 💻 │    ▒│     📱-----💻 ┄ ┄ ┄ ┄
+▒└────────────────────────────┘    ▒└────────────────────────────
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ```
 
+                      --{{4}}--
 Die Vorteile sind offensichtlich, falls ein Peer ausfällt, können die Daten dennoch bezogen werden, auch bei sehr fragilen Internetverbindungen mit Verbindungsabbrüchen.
 Und dass das Projekt langsam aber sicher im Mainstream ankommt, sieht man dadurch, dass der [Brave Browser](todo) und [Opera](todo) neben `http` und `https` jetzt auch `ipfs` und `ipns` als Protokol unterstützen und es ebenfalls erlauben Inhalte direkt über den Browser zu teilen.
 Auch LiaScript-Kurse können über IPFS übertragen werden.
 
+</section>
+
+    {{5-6}}
+<section>
+
 #### Beaker Browser 🕊️
 
+                      --{{5}}--
 Der Beaker-Browser war anders!
 Leider wurde vor kurzem eingestellt.
 Es handelte sich um einen Peer-2-Peer Browser, der es erlaubte im Browser direkt komplette WebSeiten zu erstellen oder auch LiaScript-Markdown Projekte.
@@ -397,7 +412,16 @@ War der Browser aus oder offline ist, konnte auf die Daten nicht mehr zugegriffe
 
 !?[Beaker-Browser](https://www.youtube.com/watch?v=faBigIjf05M)
 
+</section>
+
+    {{6}}
+<section>
+
 #### HowTo: Tor & OnionShare
+
+                      --{{6}}--
+Das [Tor-Netzwerk](https://de.wikipedia.org/wiki/Tor_%28Netzwerk%29) ist ein System, das es Benutzern ermöglicht, ihre Online-Aktivitäten und ihre Identität zu anonymisieren, indem es den Datenverkehr über mehrere Server leitet, um die Quelle der Daten zu verbergen.
+Das Netzwerk besteht aus Tausenden von freiwilligen Servern auf der ganzen Welt, die als "Knotenpunkte" fungieren und den Datenverkehr verschlüsseln, um die Privatsphäre der Benutzer zu schützen.
 
 __Tor Browser: For anonymous browsing__
 
@@ -430,11 +454,11 @@ __OnionShare for anonymous hosting and sharing__
 * Open the README.md of the course and copy this URL
 * Goto https://LiaScript.github.io and paste this URL "click on Load URL"
 
+</section>
 
+### Bildung, Internet & Barrieren?
 
-#### Internet & Bildung?
-
-                       --{{1}}--
+                       --{{0}}--
 Warum sollte so etwas wie Tor in der Bildung überhaupt relevant sein?
 Schaut man sich die Weltkarte an, dann wird schnell klar, dass das Internet nicht so frei und offen ist, wie es vielleicht von Deutschland aus wirkt.
 In dieser Karte haben wir China und Nord-Korea bewusst herausgenommen um den anderen Ländern auch die Möglichkeit zu geben rot zu werden.
@@ -442,8 +466,9 @@ In dieser Karte haben wir China und Nord-Korea bewusst herausgenommen um den and
                         {{0-1}}
 ![Internet Zensur](img/censorship.png "Quelle: https://www.comparitech.com/blog/vpn-privacy/internet-censorship-map ")
 
-Um dies fortzuführen soll exemplarisch Afghanistan herausgenommen werden.
-Ein Land in dem 
+                       --{{1}}--
+Schaut man sich die derzeitige Situation in Afghanistan an, so wird deutlich, dass Recht auf Bildung vielerorts einfach nicht gegeben ist.
+China unterstützt Afghanistan zwar beim Ausbau des 4G-Netzes, der Großteil der Bevölkerung hat noch immer kein Internet, jedoch wird gleicher Weise wird auch die Überwachung und Filterung verstärkt.
 
                          {{1}}
 ![Taliban](img/taliban.png "Quellen: _ https://taz.de/Repressionen-in-Afghanistan/!5926105/ \| https://www.deutschlandfunkkultur.de/afghanistan-bildung-100.html \| https://www.business-standard.com/article/international/taliban-blocks-23-mn-websites-in-afghanistan-over-immoral-content-122082600086_1.html \| https://www.reuters.com/world/asia-pacific/afghan-girls-struggle-with-poor-internet-they-turn-online-classes-2023-03-27/ _")
@@ -451,39 +476,70 @@ Ein Land in dem
 
 ## 2. Akt: Offline?
 
+                       --{{0}}--
 Nur ca. 50% der Weltbevölkerung hat überhaupt Zugriff auf das Internet.
-Des Weiteren ist die Qualität der Internetverbindung 
+Des Weiteren bilden Bandbreite, Netzwerkabbrüche und fehlende Technik ein weitere Hürde.
 
+                        {{0-1}}
 ![Weltkarte Internetnutzer](https://upload.wikimedia.org/wikipedia/commons/9/99/InternetPenetrationWorldMap.svg "Prozentualer Anteil von Internetnutzern gemessen an der Landesbevölkerung 2016")
 
+                       --{{1}}--
 Kann es Internet auch offline geben?
 Die Antwort ist Ja!
 In Cuba gibt es zum Beispiel das [El Paquete Semanal](https://en.wikipedia.org/wiki/El_Paquete_Semanal).
-Dabei wird wöchentlich ein Datenpaket der neusten Filme, Serien, Zeitung, Programme zusammengestellt und verteilt.
-Bildungsplattformen, bei denen jeder Klick, jedes Testergebnis durch einen Server geprüft werden muss, sind so kaum zu etabliren.
+Dabei wird wöchentlich ein Datenpaket der neusten Filme, Serien, Zeitungen, Programme zusammengestellt und verteilt.
+LiaScript-Inhalte können so ohne Probleme transportiert werden.
+Bildungsplattformen, bei denen jeder Klick, jedes Testergebnis durch einen Server geprüft werden muss, sind so kaum zu etablieren.
 
-![Weltkarte Internetnutzer](img/cuba.png "Quellen: https://www.faz.net/aktuell/feuilleton/debatten/online-auf-kuba-jeden-sonntag-neues-internet-14893660.html \| https://cubanews.de/el-paquete-das-offline-internet-in-cuba/ ")
+                        {{1-2}}
+![Internet in Cuba](img/cuba.png "Quellen: https://www.faz.net/aktuell/feuilleton/debatten/online-auf-kuba-jeden-sonntag-neues-internet-14893660.html \| https://cubanews.de/el-paquete-das-offline-internet-in-cuba/ ")
 
-### Progressive Web Apps
+                       --{{2}}--
+Dies bringt uns zur nächsten Frage.
+__Können Webseiten auch offline funktionieren?__
 
-Wenn wir sagen kaum, dann meinen wir, es gibt Mittel und Wege.
-Die LiaScript-Webseite selbst ist eine [Progressive Web App](todo) kurz PWA.
-Sie muss nur einmal vollständig vom Browser geladen werden, dann ist sie auch offline erreichbar.
+                         {{2}}
+<iframe src="https://giphy.com/embed/qkLqpGZhf1ACB8WbTl" width="480" height="451" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-computer-app-qkLqpGZhf1ACB8WbTl">via GIPHY</a></p>
+
+### Lösung: Progressive Web Apps
+
+                 --{{0}}--
+Eine Progressive Web App (PWA), die Offline-First-Designprinzipien verwendet, ist so gestaltet, dass sie auch ohne Internetverbindung funktioniert.
+Durch das Caching von Dateien wie CSS und JavaScript auf dem Gerät des Benutzers kann die PWA schnell geladen werden, auch wenn keine Internetverbindung besteht.
+Mithilfe von IndexedDB, einer in-Browser-Datenbank, können Daten und Inhalte offline gespeichert und später synchronisiert werden, wenn eine Internetverbindung verfügbar ist.
+Dies ermöglicht eine nahtlose Benutzererfahrung, auch wenn die Internetverbindung instabil ist.
+
+__PWA Vorteile:__
+
+- Funktionieren offline
+- Inhalte können nachgeladen und gecached werden
+- Kann wie eine native App auf Android und anderen Systemen installiert werden
+- Mit IndexedDB verfügt jeder Browser über eine leistungsstarke Datenbank
+- {{1}} Nicht nur PWA: Zugriff auf GeoLocation, Kamera, Sensorik, und Bluetooth
+
+
+                 --{{1}}--
+Ein Browser ist nicht mehr nur ein Werkzeug Anzeigen von HTML-Seiten.
+Browser verfügen heutezutage über eine Vielzahl von Betriebssystem-Funktionalitäten und ermöglichen sogar den Zugriff auf Hardware.
+
+                 --{{2}}--
+__Auch die LiaScript-Webseite ist eine PWA.__
 
 
 ## 3. Akt: Kommunikation ohne Server und Login
 
-### Classroom-Lite
+
+
+
+### Lösung: Classroom-Lite
+
+
+
+
+## Zusammenfassung
+
 
 > ... Ich bin der Geist, der stets verneint!
 > Und das mit Recht; denn alles, was __ZENTRAL__ entsteht, Ist wert, daß es zugrunde geht; ...
 >
 > -- Mephisto
-
-
-## Zusammenfassung
-
-## asfd
-
-                         {{1}}
-<div style="width:100%;height:0;padding-bottom:80%;position:relative;"><iframe src="https://giphy.com/embed/3ogwFSxwLoc3eNSfyE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/feistmusic-century-feist-3ogwFSxwLoc3eNSfyE">via GIPHY</a></p>
