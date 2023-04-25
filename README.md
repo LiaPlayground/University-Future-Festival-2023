@@ -17,7 +17,7 @@ import:    https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
            https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
            https://raw.githubusercontent.com/liaTemplates/TextAnalysis/main/README.md
 
-
+link:      https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
 -->
 
 # Wie kann Web 3.0 Lehre retten?
@@ -474,7 +474,7 @@ China unterstützt Afghanistan zwar beim Ausbau des 4G-Netzes, der Großteil der
 ![Taliban](img/taliban.png "Quellen: _ https://taz.de/Repressionen-in-Afghanistan/!5926105/ \| https://www.deutschlandfunkkultur.de/afghanistan-bildung-100.html \| https://www.business-standard.com/article/international/taliban-blocks-23-mn-websites-in-afghanistan-over-immoral-content-122082600086_1.html \| https://www.reuters.com/world/asia-pacific/afghan-girls-struggle-with-poor-internet-they-turn-online-classes-2023-03-27/ _")
 
 
-## 2. Akt: Offline?
+## 2. Akt: Offline First?
 
                        --{{0}}--
 Nur ca. 50% der Weltbevölkerung hat überhaupt Zugriff auf das Internet.
@@ -515,8 +515,13 @@ __PWA Vorteile:__
 - Inhalte können nachgeladen und gecached werden
 - Kann wie eine native App auf Android und anderen Systemen installiert werden
 - Mit IndexedDB verfügt jeder Browser über eine leistungsstarke Datenbank
-- {{1}} Nicht nur PWA: Zugriff auf GeoLocation, Kamera, Sensorik, und Bluetooth
-
+- {{1}} Nicht nur PWA:
+  Zugriff auf [GeoLocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API),
+  [Kamera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) und
+  [Virtual Reality](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API),
+  [Sensorik](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs)
+  und [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API)
+  sowie Browser zu Browser Kommunikation via [WebRTC](https://de.wikipedia.org/wiki/WebRTC)
 
                  --{{1}}--
 Ein Browser ist nicht mehr nur ein Werkzeug Anzeigen von HTML-Seiten.
@@ -526,19 +531,63 @@ Browser verfügen heutezutage über eine Vielzahl von Betriebssystem-Funktionali
 __Auch die LiaScript-Webseite ist eine PWA.__
 
 
-## 3. Akt: Kommunikation ohne Server und Login
+## 3. Akt: Kommunikation zwischen Browsern
+
+
 
 
 
 
 ### Lösung: Classroom-Lite
 
+Wir bilden den Zustand
 
+[GunDB](https://gun.eco)
+
+[Matrix]()
+
+[CRDT]
 
 
 ## Zusammenfassung
 
+                     --{{0}}--
+Gehen wir von unserer Ursprungssituation aus, in der ein "Moodle" Server alle Lehrinhalte, Nutzerdaten, Versionen, etc. speichert und den gesamten Zugriff und die Kommunikation zwischen den Nutzern koordiniert.
+Dieser Server kann vom Netz gehen oder gehackt werden, der Zugriff darauf kann geblockt werden und Datenpannen können immer passieren.
 
+                      {{0-1}}
+![Moodle Platform](img/cloud0.png)<!-- class="animate__animated animate__zoomIn" -->
+
+                     --{{1}}--
+Mit LiaScript haben wir zuerst versucht, die Lehrinhalte aus dem LMS herauszunehmen.
+Des Weiteren ist es so möglich Inhalte in verschiedenen Systemen zu nutzen und sie können parallel oder kooperativ von mehreren Autoren gleichzeit bearbeitet, weiterentwickelt, übersetzt werden.
+Ein weiterer Vorteil liegt in der redundaten Speicherung und verschiedenen Verteilungsmöglichkeiten (Web, App, IPFS, Tor, Moodle, etc.) von Lehrinhalten.
+
+                      {{1-2}}
+![Moodle Platform](img/cloud1.png)<!-- class="animate__animated animate__zoomIn" -->
+
+                     --{{2}}--
+Im zweiten Schritt wurden typische Platform-aktivitäten herausgenommen.
+Das heißt, Lernende können auch offline Lehrinhalte konsumieren, Kurse werden lokal im Browser gecached, Zustandsinformationen zu Quizze, Umfragen, Programmieraufgaben, werden innerhalb des Browsers gespeichert und überprüft.
+
+                      {{2-3}}
+![Moodle Platform](img/cloud2.png)<!-- class="animate__animated animate__zoomIn" -->
+
+                     --{{3}}--
+Um Klassenräume und somit Kollaboration und Informationsaustausch zwischen verschiedenen Nutzern zu ermöglichen, wird ebenfalls kein zentraler Server mehr benötigt.
+Dieser Dienst kann von mehreren Servern oder Plattformen übernommen werden.
+Einerseits kann die ganze Kommunikation darüber realisiert werden, andererseits werden diese nur als Einstiegspunkt genutzt und dient nur der Kontaktaufnahme (finden von Peers).
+Danach können die Browser der Nutzer auch direkt und in Echtzeit mittels WebRTC kommunizieren; ohne einen Server der für die Synchronisation der Informationen zuständig ist, hierfür können CRDTs genutzt werden.
+
+                       {{3}}
+![Moodle Platform](img/cloud3.png)<!-- class="animate__animated animate__zoomIn" -->
+
+## Fazit
+
+                      --{{0}}--
+Wir können uns ewig im Kreis drehen ... Die Platform ist tod, es lebe die Platform ... oder wir nutzen die Chancen und Möglichkeit die uns ein dezentrales Netz und damit dezentrale Technologien geben, um Lehre und Bildung in einer digitalen Welt nachhaltig und unblockierbar auch in die entlegentsten Ecken des Planeten zu transportieren. 
+
+                            {{|>}}
 > ... Ich bin der Geist, der stets verneint!
 > Und das mit Recht; denn alles, was __ZENTRAL__ entsteht, Ist wert, daß es zugrunde geht; ...
 >
