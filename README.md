@@ -186,8 +186,8 @@ Zu bemerken ist, alles was mit einem `@` beginnt ist meist ein interner LiaScrip
 Die Bibliotheken werden im Kopf eines Kurses geladen.
 Am Beispiel der Code-Snippets können wir diese durch einfaches anhängen eines Makros interaktiv und kollaborativ machen.
 
-                     {{0-3}}
-Verfügbare Erweiterungen: https://github.com/topics/liascript-template
+
+__Verfügbare Erweiterungen: https://github.com/topics/liascript-template __
 
                      {{0-1}}
 ***************************************************************
@@ -223,7 +223,7 @@ void loop() {
 
 ***************************************************************
 
-                   --{{2}}--
+                   --{{1}}--
 Aber Code-Scnipsel müssen nicht nur Programmieren genutzt werden.
 Mithilfe der [ABC-Notation](todo) kann man damit komponieren.
 
@@ -248,7 +248,7 @@ c2A2 | B8A8 | G8z8
 ```
 @ABCJS.eval
 
-                    {{2-3}}
+                   --{{2}}--
 Das gleiche Prinzip kann auch im Sprachenunterricht eingesetzt werden, um neben der Rechtschreibung auch die Komplexität von Texten zu analysieren und diese gegebenenfalls für verschiedene Zielgruppen anzupassen.
 
                     {{2-3}}
@@ -525,14 +525,24 @@ Browser verfügen heutezutage über eine Vielzahl von Betriebssystem-Funktionali
 __Auch die LiaScript-Webseite ist eine PWA.__
 
 
-## 3. Akt: Kommunikation zwischen Browsern
+## 3. Akt: Kommunikation zwischen Brows(& sist)ern
 
 
 
+__Typische Server-Aufgaben:__
 
++ Rechtemanagement
++ Etablierung einer Kommunikation zwischen Nutzern
++ Austausch von Nachrichten
++ Synchronisation von Daten und ggf. Speicherung
+
+<iframe src="https://giphy.com/embed/9LN6jPI1F8LMCBXKSY" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Nanome-9LN6jPI1F8LMCBXKSY">via GIPHY</a></p>
 
 
 ### Lösung: Classroom-Lite
+
+
+
 
 Wir bilden den Zustand
 
@@ -587,9 +597,8 @@ Wir können uns ewig im Kreis drehen ... Die Platform ist tod, es lebe die Platf
 >
 > -- Mephisto
 
--------------------------------
+## Weitere Informationen
 
-Informationen 
 
 * Projekt-Webseite: https://LiaScript.github.io
 * Code: https://github.com/liascript
