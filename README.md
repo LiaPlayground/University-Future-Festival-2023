@@ -37,67 +37,86 @@ Im nun folgenden Vortrag möchten wir euch Wege und Technologien aufzeigen, die 
 
 
                        {{1-2}}
-<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d745.0172241379928!2d13.329770317829896!3d50.92568159562554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7600bf919ad43%3A0x4dc2cb2137dcaed9!2sTechnische%20Uni%2FBergakademie%20Freibg.%20Geologisches%20Institut!5e1!3m2!1sde!2sde!4v1681986802498!5m2!1sde!2sde" style="width: 100%; height: 60vh; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+************************************************************************************************
 
-                      --{{2}}--
+<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d745.0172241379928!2d13.329770317829896!3d50.92568159562554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7600bf919ad43%3A0x4dc2cb2137dcaed9!2sTechnische%20Uni%2FBergakademie%20Freibg.%20Geologisches%20Institut!5e1!3m2!1sde!2sde!4v1681986802498!5m2!1sde!2sde" style="width: 80%; height: 60vh; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                      --{{1}}--
 Wir sind Sebastian Zug (Professur für Softwaretechnologie und Robotik) und André Dietrich (Entwickler von LiaScript)?
 
-                        {{2}}
-| Name           | eMail                                   | Twitter                                            |
-|----------------|-----------------------------------------|----------------------------------------------------|
-| Sebastian Zug  | sebastian.zug@informatik.tu-freiberg.de | [\@ZugSebastian](https://twitter.com/ZugSebastian) |
-| André Dietrich | LiaScript@web.de                        | [\@an_dietrich](https://twitter.com/an_dietrich)   |
+| Name                    | eMail                                   |
+| ----------------------- | --------------------------------------- |
+| Prof. Dr. Sebastian Zug | sebastian.zug@informatik.tu-freiberg.de |
+| Dr. André Dietrich      | LiaScript@web.de                        |
+
+************************************************************************************************
+
+## 0. Prolog
+
+                       {{0-1}}
+************************************************************************************************
+
+Aktuelle Konzepte für digitale Lernmanagementsysteme (LMS) - OPAL, Moodle, Ilias, usw. - stellen eine klassische _Single Point of Failure_ dar - fällt der zentrale Server aus, ergeben sich plötzlich sehr viele existenzielle Fragen:
+
++ _Sooo alt ist die letzte Sicherung meiner Lehrmaterialien?_
++ _Wieso kann ich meine Formulare nicht per Scorm in einem andere LMS anbieten?_
++ _Wie erreiche ich meine Studierenden überhaupt mit den Materialien?_
++ _..._
++ _Wieso läuft bei der Geologie schon alles wieder?!_
+
+> Die Verschmelzung von Lehrmaterialien mit dem zugrundeliegenden LMS ist komfortabel für den Nutzer aber unflexibel bei der Übertragung, Reinitalisierung oder Wiederherstellung.
+
+Wir brauchen Representationsformate für Lehr-Lern-Inhalte, die eine dezentrale Weitergabe, Veränderung, Veröffentlichung ermöglichen. 
+
+************************************************************************************************
 
 
-## 0. Prolog: Was ist LiaScript?
+                       {{1-2}}
+************************************************************************************************
 
+Ausgangsbasis - Markdown
+=====================
 
-                --{{0}}--
+                --{{1}}--
 Ursprünglich haben wir mit der Entwicklung von LiaScript begonnen, damit wir selber für verschiedene Lehrinhalte online-Kurse erstellen konnten.
 LiaScript basiert auf Markdown, einer einfachen Auszeichnungssprache für statische Inhalte, wie sie unten abgebildet ist.
 Die Syntax ist sehr einfach gehalten und Markdown-Text kann mit jedem beliebigen Text-Editor verfasst werden.
 
-``` markdown
-# Titel
 
-Ein **dicker** Absatz kommt
-in zwei,
-nein drei Zeilen.
+```markdown Markdown.md
+# Überschrift
 
-## Untertitel
+_eine **Hervorhebung** in kursiver Umgebung_
 
-* Aufzählung mit
-
-* Unterpunkten:
-
-  1. Punkt
-  2. Punkte  
-
-### Unterunterabschnitt
+  + Punkt A
+  + Punkt A  
 
 | Mit     | einer  |
 |---------|--------|
 | Tabelle | und    |
 | zwei    | Zeilen |
+
+Und noch eine Zeile mit einer mathematischen Notation $a=cos(b)$!
 ```
-           --{{1}}--
-Zu exotisch?
-Verschickt mal diesen Text in WhatsApp und beobachtet, was passiert.
+
+Daraus ergibt sich im Ergebnis folgende Darstellung:
+
+---
+
+<div id="markdown-example" style="background-color:gray; border:1px solid black;" >
+<h1>Überschrift</h1>
+<i>eine <b>Hervorhebung</b> in kursiver Umgebung</i>
+<ul>
+  <li>Punkt 1</li>
+  <li>Punkt 2</li>
+</ul>
+Und noch eine Zeile mit einer mathematischen Notation $a=cos(b)$!
+</div>
 
 
-             {{1}}
-```` markdown
-_Versucht_ *das* ~nicht~ in WhatsApp!
+************************************************************************************************
 
-```
-code kann so aussehen
-...
-```
-````
-
-### LiaScript: Demo or Die
-
-todo: URL
+### LiaScript: Dynamische Inhalte
 
               --{{0}}--
 Wir haben versucht das Textformat um Markdown herum zu erweitern, sodass es ebenso verständlich und einfach ist, jedoch heutigen Ansprüchen genügt.
@@ -158,18 +177,20 @@ Wie fandet ihr die Demo bis jetzt?
 
 *******************************************************************
 
-### Programmierung & Erweiterungen
+### LiaScript: Erweiterungen
 
-
+                  --{{0}}--
 Uns ging es ursprünglich um die bessere und interaktive Programmierkurse.
 Um benötigte Zusatzfunktionalität integrieren zu können haben wir ein Makro-System geschaffen, dass dazu genutzt werden kann die Funktionen eines Dokuments in ein anderes zu importieren.
 Zu bemerken ist, alles was mit einem `@` beginnt ist meist ein interner LiaScript-Befehl.
 Die Bibliotheken werden im Kopf eines Kurses geladen.
 Am Beispiel der Code-Snippets können wir diese durch einfaches anhängen eines Makros interaktiv und kollaborativ machen.
 
-
+                     {{0-3}}
 Verfügbare Erweiterungen: https://github.com/topics/liascript-template
 
+                     {{0-1}}
+***************************************************************
 
 <div id="example">
 <wokwi-led color="red"   pin="13" label="13"></wokwi-led>
@@ -200,12 +221,14 @@ void loop() {
 ```
 @AVR8js.sketch(example)
 
-                   --{{1}}--
+***************************************************************
+
+                   --{{2}}--
 Aber Code-Scnipsel müssen nicht nur Programmieren genutzt werden.
 Mithilfe der [ABC-Notation](todo) kann man damit komponieren.
 
 
-                     {{1}}
+                     {{1-2}}
 ``` abc
 % channel: 0
 X:353
@@ -225,9 +248,10 @@ c2A2 | B8A8 | G8z8
 ```
 @ABCJS.eval
 
+                    {{2-3}}
 Das gleiche Prinzip kann auch im Sprachenunterricht eingesetzt werden, um neben der Rechtschreibung auch die Komplexität von Texten zu analysieren und diese gegebenenfalls für verschiedene Zielgruppen anzupassen.
 
-                    {{3}}
+                    {{2-3}}
 ```
 Playing games has always been thought to be important to
 the development of well-balanced and creative children;
@@ -241,9 +265,12 @@ to release built up tension.
 ```
 @Textanalysis.FULL
 
+                     {{3}}
+***************************************************************
+Natürlich ChatGPT
+------------------------
 
-### Natürlich ChatGPT
-
+                      --{{3}}--
 Bei LiaScript handelt es sich um reine Textbeschreibungen von Lehrinhalten.
 ChatGPT ist eine Künstliche Intelligenz die Texte erzeugt.
 Kann ChatGPT auch genutzt werden Online-Kurse für verschiedenste Themen auch in LiaScript zu erzeugen?
@@ -253,42 +280,9 @@ Eine Anfrage zu einem bestimmten Lehrinhalt liefert als Result somit nicht nur e
 
 ![Chat](img/ChatGPT.png "Quelle: https://aneesha.medium.com/act-as-a-learning-designer-getting-chatgpt-to-generate-an-online-module-8a16a2813bd6")
 
-In einer 
-
-
-??[EduWeaver AutoCourse](https://colab.research.google.com/github/aneesha/eduweaver/blob/main/EduWeaver_AutoCourse.ipynb)
-
 https://github.com/aneesha/eduweaver
 
-
-### Wo finde ich mehr Informationen?
-
-* Projekt-Webseite: https://LiaScript.github.io
-* Code: https://github.com/liascript
-* YouTube: https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
-* Weitere Quellen:
-
-  * Dokumentation: https://github.com/LiaScript/docs
-  * Freie Bücher: https://github.com/LiaBooks
-  * Templates: https://github.com/topics/liascript-template
-  * Kurse & ...: https://github.com/topics/liascript-course
-  * Blog: https://aizac.herokuapp.com
-
-* Editor: https://code.visualstudio.com/Download
-  
-  * Liascript-Preview: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview
-  * Liascript-Snippets: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets
-
-* Development-Server: https://www.npmjs.com/package/@liascript/devserver
-* Exporter: https://www.npmjs.com/package/@liascript/exporter
-
----
-
-Kontakt via:
-
-* eMail: LiaScript@web.de
-* Twitter: https://twitter.com/LiaScript
-* Chat: https://gitter.im/LiaScript/community
+***************************************************************
 
 
 ## 1. Akt: Vom Problem des Speicherns
@@ -592,3 +586,26 @@ Wir können uns ewig im Kreis drehen ... Die Platform ist tod, es lebe die Platf
 > Und das mit Recht; denn alles, was __ZENTRAL__ entsteht, Ist wert, daß es zugrunde geht; ...
 >
 > -- Mephisto
+
+-------------------------------
+
+Informationen 
+
+* Projekt-Webseite: https://LiaScript.github.io
+* Code: https://github.com/liascript
+* YouTube: https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
+
+* Editor: https://code.visualstudio.com/Download
+  
+  * Liascript-Preview: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview
+  * Liascript-Snippets: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets
+
+* Exporter: https://www.npmjs.com/package/@liascript/exporter
+
+---
+
+Kontakt via:
+
+* eMail: LiaScript@web.de
+* Twitter: https://twitter.com/LiaScript
+* Chat: https://gitter.im/LiaScript/community
