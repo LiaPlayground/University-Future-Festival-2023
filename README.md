@@ -554,7 +554,9 @@ __Auch die LiaScript-Webseite ist eine PWA.__
 
 ## 3. Akt: Kommunikation zwischen Brows(& sist)ern
 
-
+                 --{{0}}--
+Server werden immer noch benötigt, um die Kommunikation zwischen den Nutzern einer Plattform zu ermöglichen.
+Die größten Hürden dabei sind, die Nutzer müssen sich finden können und die Nachrichten, die Nachrichtenströme müssen synchronisiert werden.
 
 __Typische Server-Aufgaben:__
 
@@ -563,22 +565,61 @@ __Typische Server-Aufgaben:__
 + Austausch von Nachrichten
 + Synchronisation von Daten und ggf. Speicherung
 
-<iframe src="https://giphy.com/embed/9LN6jPI1F8LMCBXKSY" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Nanome-9LN6jPI1F8LMCBXKSY">via GIPHY</a></p>
+                  --{{1}}--
+Wir haben aber gehört, dass Browser untereinander in der Lage sind mittels WebRTC eine direkte Kommunikation zu etablieren.
+Und, für die Synchronisation in verteilten Systemen gibt es mittlerweile neue Datentypen, sogenannte Conflict Free Replicated Datatypes (CRDTs), die auch ohne einen zentralen Server oder einen Haupt-Peer Konsistenz garantieren können.
 
 
 ### Lösung: Classroom-Lite
 
-Wir haben un
+                  --{{0}}--
+In LiaScript nutzen wir [Y-js](https://yjs.dev) CRDTs als allgemeine Datenstruktur für den Nachrichten austausch.
+
+__Daten --> [Yjs](https://yjs.dev):__ A shared editing framework that exposes Shared Types that can be manipulated like any other data type, but they are synced automatically!
+
+* Automatic Syncing
+* Offline Support
+* Peer-to-Peer Ready
 
 
-Wir bilden den Zustand
+      {{1}}
+<section>
 
-[GunDB](https://gun.eco)
+                 --{{1}}--
+Diese können über verschiedenste Plattformen und Netzwerke ausgetauscht werden.
 
-[Matrix]()
+__Kommunikation -->__
 
-[CRDT]
+* [GunDB](https://gun.eco): A distributed database for freedom fighters
+* [Meet.Jit.si](https://meet.jit.si/): A publicly accessible instance of [Jitsi](https://en.wikipedia.org/wiki/Jitsi) that allows users to quickly and easily make video calls without registration or installation.
+* [PubNub](https://www.pubnub.com): Data stream network and real-time infrastructure-as-a-service
+* [Matrix](https://matrix.org): An open network for secure, decentralized communication
 
+</section>
+
+      {{2}}
+<section>
+
+__Was wird synchronisiert?__
+
+            --{{2}}--
+Für Videos und Audio sind andere Dienste besser geeignet.
+Mit LiaScript versuchen die gleiche Funktionalität auf allen Kommunikationskanälen zur Verfügung zu stellen, deshalb werden nur die folgenden Elemente synchronisiert:
+
+* Quizze
+* Umfragen
+* Kollaborativer Editor
+* Chat-Nachrichten mit ... Quizzen, Umfragen, kollaborativen Editoren
+
+
+            --{{3}}--
+Classroom-Light bedeutet, Daten werden nur zwischen den Browser synchronisiert.
+Ein Klassenraum existiert nur so lange, wie sich Nutzer in diesem Raum befinden.
+Alle Nutzer sind anonym.
+Verlässt ein Nutzer den Raum, so nimmt er seine Quiz-Resultate und Umfragen mit.
+Verlassen alle Nutzer den Raum, so werden alle Daten vergessen...
+
+</section>
 
 ## Zusammenfassung
 
