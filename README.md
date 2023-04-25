@@ -105,14 +105,22 @@ Daraus ergibt sich im Ergebnis folgende Darstellung:
 
 ---
 
-<div id="markdown-example" style="" >
-<h1>Überschrift</h1>
-<i>eine <b>Hervorhebung</b> in kursiver Umgebung</i>
-<ul>
-  <li>Punkt 1</li>
-  <li>Punkt 2</li>
-</ul>
+<div>
+
+# Überschrift
+
+_eine **Hervorhebung** in kursiver Umgebung_
+
++ Punkt A
++ Punkt A  
+
+| Mit     | einer  |
+|---------|--------|
+| Tabelle | und    |
+| zwei    | Zeilen |
+
 Und noch eine Zeile mit einer mathematischen Notation $a=cos(b)$!
+
 </div>
 
 
