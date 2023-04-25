@@ -621,6 +621,15 @@ Verlassen alle Nutzer den Raum, so werden alle Daten vergessen...
 
 </section>
 
+
+            --{{4}}--
+Hier eine kleine Demo, zu diesem Zeitpunkt gab es noch nicht die Möglichkeit des kollaborativen editierens und der Chat existierte auch noch nicht:
+
+              {{4}}
+!?[LiaScript Classroom](https://www.youtube.com/watch?v=Kjk6OblugXI)
+
+
+
 ## Zusammenfassung
 
                      --{{0}}--
