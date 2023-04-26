@@ -18,6 +18,8 @@ import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
 link:     https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/University-Future-Festival-2023/blob/master/README.md)
+
 # Wie kann Web 3.0 Lehre retten?
 
                       --{{0}}--
