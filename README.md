@@ -3,7 +3,7 @@ author:   André Dietrich & Sebastian Zug
 
 email:    LiaScript@web.de
 
-version:  0.0.1
+version:  1.0.0
 
 language: de
 
@@ -86,7 +86,7 @@ Ursprünglich haben wir mit der Entwicklung von LiaScript begonnen, damit wir se
 LiaScript basiert auf Markdown, einer einfachen Auszeichnungssprache für statische Inhalte, wie sie unten abgebildet ist.
 Die Syntax ist sehr einfach gehalten und Markdown-Text kann mit jedem beliebigen Text-Editor verfasst werden.
 
-
+<!-- class="translate" -->
 ```markdown             README.md
 # Überschrift
 
